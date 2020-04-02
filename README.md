@@ -8,3 +8,15 @@
   * vue install
   * vue run server
 2. springboot-blog文件夹是后端实现代码,数据库library,用户名root,密码root,表自动创建,监听端口8081,Idea 打开运行
+
+
+**注意事项**  
+  为了防止博客类型渲染有问题,创建好数据库表后,使用如下查询语句生成表内容  
+  ```
+  BEGIN;
+  INSERT INTO `t_type` VALUES (1, 'Vue.js');
+  INSERT INTO `t_type` VALUES (2, 'Node.js');
+  INSERT INTO `t_type` VALUES (3, 'React.js');
+  INSERT INTO `t_type` VALUES (4, 'Angular4.js');
+  COMMIT;
+  ```
